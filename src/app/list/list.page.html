@@ -11,14 +11,24 @@
 
 <ion-content>
   <ion-list>
-    <ion-item *ngFor="let item of items">
+    <ion-list-header>
+      <ion-label>Items</ion-label>
+    </ion-list-header>
+    <ion-item *ngFor="let item of items" lines="none">
       <ion-icon [name]="item.icon" slot="start"></ion-icon>
-      {{item.title}}
+      {{ item.title }}
       <div class="item-note" slot="end">
-        {{item.note}}
+      {{ item.note }}
       </div>
     </ion-item>
+    <ion-item detail="false" color="danger">
+        <ion-label>
+          Secondary Color Item
+        </ion-label>
+    </ion-item>
+      
   </ion-list>
+  
   <!--
     <div *ngIf="selectedItem" padding>
       You navigated here from <b>{{selectedItem.title }}</b>
