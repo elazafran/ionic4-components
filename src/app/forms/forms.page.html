@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Presents</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form action="">
+      <ion-item>
+          <ion-label>Gender</ion-label>
+          <ion-select interface="popover"  placeholder="Select One">
+            <ion-select-option value="f">Female</ion-select-option>
+            <ion-select-option value="m">Male</ion-select-option>
+          </ion-select>
+        </ion-item>
+    <ion-item>
+      <ion-label position="floating">Teléfono</ion-label>
+      <ion-input type="tel"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-range min="-10" max="10" pin="true" color="danger">
+        <ion-icon size="small" slot="start" name="sunny"></ion-icon>
+        <ion-icon slot="end" name="sunny"></ion-icon>
+      </ion-range>
+    </ion-item>
+    <ion-list>
+      <ion-item >
+        <ion-label>Nirvana</ion-label>
+        <ion-checkbox slot="end" ></ion-checkbox>
+      </ion-item>
+      <ion-item >
+        <ion-label>Cold Play</ion-label>
+        <ion-checkbox slot="end" ></ion-checkbox>
+      </ion-item>
+      <ion-item >
+        <ion-label>ADDC</ion-label>
+        <ion-checkbox slot="end" ></ion-checkbox>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-radio-group>
+        <ion-list-header>
+          Auto Manufacturers
+        </ion-list-header>
+        <ion-item>
+          <ion-label>Cord</ion-label>
+          <ion-radio value="cord" checked slot="start" color="dark"></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Duesenberg</ion-label>
+          <ion-radio value="duesenberg" slot="start" color="danger"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+    <ion-item>
+      <ion-label>Gender</ion-label>
+      <ion-select interface="popover"  placeholder="Select One">
+        <ion-select-option value="f">Female</ion-select-option>
+        <ion-select-option value="m">Male</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Gender</ion-label>
+      <ion-select interface="action-sheet"  placeholder="Select One">
+        <ion-select-option value="f">Female</ion-select-option>
+        <ion-select-option value="m">Male</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Gender</ion-label>
+      <ion-select multiple="true" placeholder="Select One">
+        <ion-select-option value="f">Female</ion-select-option>
+        <ion-select-option value="m">Male</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>MMMM</ion-label>
+        <ion-datetime displayFormat="MMMM" value="2012-12-15T13:47:20.789"></ion-datetime>
+      </ion-item>
+  </form>
+</ion-content>

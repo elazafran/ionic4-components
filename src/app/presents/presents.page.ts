@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActionSheetController } from '@ionic/angular';
-import { AlertController } from '@ionic/angular';
+import { ActionSheetController, AlertController, ToastController, ModalController } from '@ionic/angular';
+
+import { ModalPage } from './../modal/modal.page';
 
 @Component({
   selector: 'app-presents',
@@ -12,6 +13,8 @@ export class PresentsPage implements OnInit {
   constructor(
    private actionCtrl: ActionSheetController,
    private alertCtrl: AlertController,
+   public toastCtrl: ToastController,
+   public modalCtrl: ModalController
   ) { }
 
   ngOnInit() {
@@ -65,4 +68,27 @@ export class PresentsPage implements OnInit {
 
     await alert.present();
   }
+
+  async openToast() {
+    const toast = await this.toastCtrl.create({
+      message: 'Tus preferencias han sido salvadas.',
+      duration: 2000,
+      position: 'bottom',
+      showCloseButton: true,
+      // closeButtonText: 'cerrar'
+    });
+    await toast.present();
+
+  }
+
+  async openModal() {
+    const modal = await this.modalCtrl.create({
+      component: ModalPage
+    });
+
+    await modal.present();
+
+  }
+
+
 }

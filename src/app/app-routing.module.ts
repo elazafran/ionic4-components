@@ -30,6 +30,10 @@ const routes: Routes = [
   {
     path: 'presents',
     loadChildren: './presents/presents.module#PresentsPageModule'
+  },
+  {
+    path: 'forms',
+    loadChildren: './forms/forms.module#FormsPageModule'
   }
 ];
 
